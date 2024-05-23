@@ -2,6 +2,7 @@
   background-image: url("../img/Background.png");
   background-size: cover;
   background-position: center;
+  padding: 0 20px;
 }
 
 .hero-header {
@@ -497,4 +498,35 @@
 
 .footer-app {
   gap: 20px;
+}
+
+.menu-toggle {
+  display: none; /* Hamburger menüyü başlangıçta gizleyin */
+  cursor: pointer;
+}
+
+/* Hamburger menü simgesi için stiller */
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 5px 0;
+}
+
+/* Küçük ekran boyutları için menüyü görünür hale getirin */
+@media (max-width: 1066px) {
+  .menu-toggle {
+    display: block; /* Hamburger menü simgesini görünür yap */
+  }
+
+  .hero-header-nav {
+    display: none; /* Menüyü başlangıçta gizle */
+  }
+
+  .hero-header-nav.active {
+    display: block; /* Menüyü açıkken görünür yap */
+  }
+  .hero-header-right {
+    display: none;
+  }
 }
