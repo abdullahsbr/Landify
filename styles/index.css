@@ -550,4 +550,9 @@
   .phone-div {
     padding-left: 0;
   }
+  .homepage-clouds-logo {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
 }
