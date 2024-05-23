@@ -61,6 +61,7 @@
 
 .homepage-clouds-logo {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 64px;
 }
@@ -83,17 +84,17 @@
 
 .multiple-title {
   color: #18191f;
-  font-size: 48px;
+  font-size: clamp(25px, 4vw, 48px);
+  line-height: clamp(15px, 4vw, 64px);
   font-weight: 800;
-  line-height: 64px;
   text-align: center;
   font-family: "Inter", sans-serif;
 }
 
 .multiple-p {
   color: #18191f;
-  font-size: 18px;
-  line-height: 32px;
+  font-size: clamp(25px, 5vw, 18px);
+  line-height: clamp(15px, 5vw, 25px);
   font-weight: 400;
   text-align: center;
   font-family: "Inter", sans-serif;
@@ -554,5 +555,16 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .features-row-1 {
+    flex-direction: column;
+    align-items: center;
+  }
+  .features-row-2 {
+    flex-direction: column;
+    align-items: center;
   }
 }
