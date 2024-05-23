@@ -41,7 +41,8 @@
 }
 
 .hero-title {
-  font-size: 72px;
+  font-size: clamp(2rem, 8vw, 72px);
+  line-height: clamp(2rem, 8vw, 98px);
   font-weight: 800;
 }
 
@@ -500,6 +501,15 @@
   gap: 20px;
 }
 
+.phone-div {
+  flex: 1;
+  padding-left: 100px;
+}
+
+.hero-mockup-img {
+  max-width: 100%;
+  min-width: clamp(200px 8vw 350px);
+}
 .menu-toggle {
   display: none; /* Hamburger menüyü başlangıçta gizleyin */
   cursor: pointer;
@@ -528,5 +538,16 @@
   }
   .hero-header-right {
     display: none;
+  }
+  .hero-main {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .hero-main-left {
+    align-items: center;
+  }
+  .phone-div {
+    padding-left: 0;
   }
 }
