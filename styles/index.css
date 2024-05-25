@@ -159,17 +159,24 @@
   position: relative;
 }
 
+.quote-mark-div {
+  display: flex;
+  flex: 1;
+}
+
 .quote-img {
+  display: flex;
   width: 142px;
   line-height: 120px;
   position: absolute;
   left: -19%;
+  min-width: clamp(200px 8vw 350px);
 }
 
 .heading-title {
   color: #18191f;
-  font-size: 48px;
-  line-height: 64px;
+  font-size: clamp(25px, 4vw, 48px);
+  line-height: clamp(25px, 4vw, 64px);
   margin-top: 50px;
   margin-bottom: 20px;
   font-family: "Inter", sans-serif;
@@ -209,8 +216,8 @@
 
 .hubspor-p {
   color: #18191f;
-  font-size: 18px;
-  line-height: 32px;
+  font-size: clamp(15px, 4vw, 18px);
+  line-height: clamp(31px, 4vw, 32px);
   font-family: "Inter", serif;
   margin-top: 5px;
   margin-bottom: 10px;
@@ -246,8 +253,8 @@
 
 .airbnb-p {
   color: #18191f;
-  font-size: 18px;
-  line-height: 32px;
+  font-size: clamp(15px, 4vw, 18px);
+  line-height: clamp(31px, 4vw, 32px);
   font-family: "Inter", serif;
   margin-top: 5px;
   margin-bottom: 10px;
@@ -556,6 +563,18 @@
     align-items: center;
     gap: 20px;
   }
+  .testimonial-conteiner {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    flex-direction: column;
+  }
+  .quote-img {
+    display: none;
+  }
+  .heading-h-p {
+    margin-left: 90px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -567,4 +586,24 @@
     flex-direction: column;
     align-items: center;
   }
+}
+
+@media (max-width: 1066px) {
+  .airbnb-img {
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 1066px) {
+  .airbnb-box {
+    padding: 0;
+  }
+
+  .hubspot-box {
+    margin-left: 62px;
+  }
+  /* .bookmy-box {
+    width: 500px;
+    margin-left: 70px;
+  } */
 }
