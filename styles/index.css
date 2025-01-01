@@ -534,11 +534,25 @@
 /* Küçük ekran boyutları için menüyü görünür hale getirin */
 @media (max-width: 1066px) {
   .menu-toggle {
-    display: block; /* Hamburger menü simgesini görünür yap */
+    display: flex; /* Hamburger menü simgesini görünür yap */
+    justify-content: space-between;
+    margin-right: 40px;
   }
 
   .hero-header-nav {
-    display: none; /* Menüyü başlangıçta gizle */
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    justify-content: flex-start;
+    position: absolute;
+    padding: 20px 35px;
+    right: 0;
+    align-items: flex-start;
+    width: 100%;
+    height: 100vh;
+    top: 75px;
+    background-color: rgba(80, 118, 145, 0.55);
+    z-index: 100;
   }
 
   .hero-header-nav.active {
@@ -546,6 +560,14 @@
   }
   .hero-header-right {
     display: none;
+  }
+
+  .hero-hader-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: absolute;
   }
   .hero-main {
     flex-direction: column;
@@ -566,8 +588,8 @@
   .testimonial-conteiner {
     display: flex;
     align-items: center;
-    padding-left: 30px;
     flex-direction: column;
+    padding: 0 0 20px 30px;
   }
   .quote-img {
     display: none;
