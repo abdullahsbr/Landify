@@ -346,6 +346,12 @@
   margin-top: 50px;
 }
 
+.headline-left-tit {
+  font-family: "Inter", sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+}
+
 .headline-right {
   display: flex;
   justify-content: center;
