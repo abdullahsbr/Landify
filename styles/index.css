@@ -25,6 +25,40 @@
   margin-left: 15px;
 }
 
+.hamburger {
+  position: fixed;
+  z-index: 100;
+  top: 1rem;
+  right: 1rem;
+  padding: 4px;
+  border: black solid 1px;
+  background: white;
+  cursor: pointer;
+}
+
+.closeIcon {
+  display: none;
+}
+
+.showMenu {
+  transform: translateY(0);
+}
+
+.menu {
+  position: fixed;
+  transform: translateX(-100%);
+  transition: transform 0.3s;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 99;
+  background: black;
+  color: white;
+  list-style: none;
+  padding-top: 4rem;
+}
+
 .hero-nav-links > a {
   font-weight: 500px;
   font-family: "Inter", sans-serif;
@@ -364,7 +398,7 @@
   line-height: 54px;
   font-family: "Inter", sans-serif;
   color: #18191f;
-  padding: 30px 0;
+  padding: 10px 0;
 }
 
 .headline-p {
@@ -540,12 +574,6 @@
 
 /* Küçük ekran boyutları için menüyü görünür hale getirin */
 @media (max-width: 1066px) {
-  .menu-toggle {
-    display: flex; /* Hamburger menü simgesini görünür yap */
-    justify-content: space-between;
-    margin-right: 40px;
-  }
-
   .hero-header-nav {
     display: flex;
     flex-direction: column;
@@ -558,7 +586,7 @@
     width: 100%;
     height: 100vh;
     top: 75px;
-    background-color: rgba(80, 118, 145, 0.55);
+    /* background-color: rgba(80, 118, 145, 0.55); */
     z-index: 100;
   }
 
